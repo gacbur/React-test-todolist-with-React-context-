@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    height: 100vh;
+    margin:200px auto;
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tasklist-cnt{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:2em 1em;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    width:300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AddTask{
+    padding:2em 0em;
+    width:100%;
+    height: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-el-cnt{
+    height: 2.3em;
+    display: flex;
+    flex-direction: row;
+    width:100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-el-cnt input{
+    display: flex;
+    width:80%;
+    height: 100%;
 }
+
+.add-el-cnt button{
+    width:20%;
+}
+
+.deleteSection{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding-top:1em;
+}
+
+.task-el-cnt{
+    padding-top:1em;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-el{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding:.6em 0em;
+}
+
+.task-el:first-child{
+    border-bottom: 1px solid lightgray;
+}
+
+.task-el + .task-el{
+    border-bottom: 1px solid lightgray
+}
+
+.task-el-text{
+    display: flex;
+    flex-grow: 1;
+}
+
+.task-el-delete{
+    height: 1.3em;
+    width:1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.empty-list-text{
+    width:100%;
+    text-align: center;
+}
+
